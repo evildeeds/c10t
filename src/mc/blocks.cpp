@@ -170,6 +170,7 @@ namespace mc {
     MaterialName[FenceGate] = "FenceGate";
     MaterialName[BrickStairs] = "BrickStairs";
     MaterialName[StoneBrickStairs] = "StoneBrickStairs";
+    MaterialName[StainedGlassPane] = "StainedGlassPane";
     MaterialName[PineLeaves] = "PineLeaves";
     MaterialName[BirchLeaves] = "BirchLeaves";
     
@@ -417,6 +418,7 @@ namespace mc {
     MaterialModes[FenceGate] = Block;
     MaterialModes[BrickStairs] = Block;
     MaterialModes[StoneBrickStairs] = Block;
+    MaterialModes[StainedGlassPane] = Block;
     MaterialModes[PineLeaves] = Block;
     MaterialModes[BirchLeaves] = Block;
 
@@ -441,6 +443,23 @@ namespace mc {
     set_color(StainedGlass, ColorBrown, color(86, 51, 28, 48));
     set_color(StainedGlass, ColorDarkGreen, color(56, 77, 24, 48));
     set_color(StainedGlass, ColorRed, color(164, 45, 41, 48));
+
+    set_color(StainedGlassPane, ColorBlack, get_color(StainedGlassPane, ColorBlack));
+    set_color(StainedGlassPane, ColorWhite, get_color(StainedGlassPane, ColorWhite));
+    set_color(StainedGlassPane, ColorOrange, get_color(StainedGlassPane, ColorOrange));
+    set_color(StainedGlassPane, ColorMagenta, get_color(StainedGlassPane, ColorMagenta));
+    set_color(StainedGlassPane, ColorLightBlue, get_color(StainedGlassPane, ColorLightBlue));
+    set_color(StainedGlassPane, ColorYellow, get_color(StainedGlassPane, ColorYellow));
+    set_color(StainedGlassPane, ColorLightGreen, get_color(StainedGlassPane, ColorLightGreen));
+    set_color(StainedGlassPane, ColorPink, get_color(StainedGlassPane, ColorPink));
+    set_color(StainedGlassPane, ColorGray, get_color(StainedGlassPane, ColorGray));
+    set_color(StainedGlassPane, ColorLightGray, get_color(StainedGlassPane, ColorLightGray));
+    set_color(StainedGlassPane, ColorCyan, get_color(StainedGlassPane, ColorCyan));
+    set_color(StainedGlassPane, ColorPurple, get_color(StainedGlassPane, ColorPurple));
+    set_color(StainedGlassPane, ColorBlue, get_color(StainedGlassPane, ColorBlue));
+    set_color(StainedGlassPane, ColorBrown, get_color(StainedGlassPane, ColorBrown));
+    set_color(StainedGlassPane, ColorDarkGreen, get_color(StainedGlassPane, ColorDarkGreen));
+    set_color(StainedGlassPane, ColorRed, get_color(StainedGlassPane, ColorRed));
 
     set_color(Wool, ColorBlack, color(27, 23, 23, 255));
     set_color(Wool, ColorWhite, color(223, 223, 223, 255));

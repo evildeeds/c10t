@@ -134,6 +134,7 @@ namespace mc {
     EndPortalFrame = 0x78,
     EndStone = 0x79,
     DragonEgg = 0x7A,
+    StainedGlassPane = 0xA0,
     PineLeaves = 0xEC,
     BirchLeaves = 0xED,
     MaterialCount = 0x1000
