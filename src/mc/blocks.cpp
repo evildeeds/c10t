@@ -142,6 +142,7 @@ namespace mc {
     MaterialName[Jackolantern] = "Jackolantern";
     MaterialName[RedstoneRepeaterOn] = "RedstoneRepeaterOn";
     MaterialName[RedstoneRepeaterOff] = "RedstoneRepeaterOff";
+    MaterialName[StainedGlass] = "StainedGlass";
     MaterialName[Cake] = "Cake";
     MaterialName[EggBlock] = "EggBlock";
     MaterialName[StoneBrick] = "StoneBrick";
@@ -389,6 +390,7 @@ namespace mc {
     MaterialModes[Cake] = HalfBlock;
     MaterialModes[RedstoneRepeaterOn] = Block;
     MaterialModes[RedstoneRepeaterOff] = Block;
+    MaterialModes[StainedGlass] = Block;
     MaterialModes[EggBlock] = Block;
     MaterialModes[StoneBrick] = Block;
     MaterialModes[HugeRedMushroom] = Block;
@@ -423,22 +425,39 @@ namespace mc {
      * Start with the highest index to reduce allocation time complexity 
      * The order of the following entries does not matter.
      */
-    set_color(Wool, WoolBlack, color(27, 23, 23, 255));
-    set_color(Wool, WoolWhite, color(223, 223, 223, 255));
-    set_color(Wool, WoolOrange, color(234, 128, 55, 255));
-    set_color(Wool, WoolMagenta, color(191, 76, 201, 255));
-    set_color(Wool, WoolLightBlue, color(105, 139, 212, 255));
-    set_color(Wool, WoolYellow, color(195, 181, 28, 255));
-    set_color(Wool, WoolLightGreen, color(59, 189, 48, 255));
-    set_color(Wool, WoolPink, color(218, 132, 155, 255));
-    set_color(Wool, WoolGray, color(67, 67, 67, 255));
-    set_color(Wool, WoolLightGray, color(159, 166, 166, 255));
-    set_color(Wool, WoolCyan, color(39, 117, 150, 255));
-    set_color(Wool, WoolPurple, color(130, 54, 196, 255));
-    set_color(Wool, WoolBlue, color(39, 51, 154, 255));
-    set_color(Wool, WoolBrown, color(86, 51, 28, 255));
-    set_color(Wool, WoolDarkGreen, color(56, 77, 24, 255));
-    set_color(Wool, WoolRed, color(164, 45, 41, 255));
+    set_color(StainedGlass, ColorBlack, color(27, 23, 23, 48));
+    set_color(StainedGlass, ColorWhite, color(223, 223, 223, 48));
+    set_color(StainedGlass, ColorOrange, color(234, 128, 55, 48));
+    set_color(StainedGlass, ColorMagenta, color(191, 76, 201, 48));
+    set_color(StainedGlass, ColorLightBlue, color(105, 139, 212, 48));
+    set_color(StainedGlass, ColorYellow, color(195, 181, 28, 48));
+    set_color(StainedGlass, ColorLightGreen, color(59, 189, 48, 48));
+    set_color(StainedGlass, ColorPink, color(218, 132, 155, 48));
+    set_color(StainedGlass, ColorGray, color(67, 67, 67, 48));
+    set_color(StainedGlass, ColorLightGray, color(159, 166, 166, 48));
+    set_color(StainedGlass, ColorCyan, color(39, 117, 150, 48));
+    set_color(StainedGlass, ColorPurple, color(130, 54, 196, 48));
+    set_color(StainedGlass, ColorBlue, color(39, 51, 154, 48));
+    set_color(StainedGlass, ColorBrown, color(86, 51, 28, 48));
+    set_color(StainedGlass, ColorDarkGreen, color(56, 77, 24, 48));
+    set_color(StainedGlass, ColorRed, color(164, 45, 41, 48));
+
+    set_color(Wool, ColorBlack, color(27, 23, 23, 255));
+    set_color(Wool, ColorWhite, color(223, 223, 223, 255));
+    set_color(Wool, ColorOrange, color(234, 128, 55, 255));
+    set_color(Wool, ColorMagenta, color(191, 76, 201, 255));
+    set_color(Wool, ColorLightBlue, color(105, 139, 212, 255));
+    set_color(Wool, ColorYellow, color(195, 181, 28, 255));
+    set_color(Wool, ColorLightGreen, color(59, 189, 48, 255));
+    set_color(Wool, ColorPink, color(218, 132, 155, 255));
+    set_color(Wool, ColorGray, color(67, 67, 67, 255));
+    set_color(Wool, ColorLightGray, color(159, 166, 166, 255));
+    set_color(Wool, ColorCyan, color(39, 117, 150, 255));
+    set_color(Wool, ColorPurple, color(130, 54, 196, 255));
+    set_color(Wool, ColorBlue, color(39, 51, 154, 255));
+    set_color(Wool, ColorBrown, color(86, 51, 28, 255));
+    set_color(Wool, ColorDarkGreen, color(56, 77, 24, 255));
+    set_color(Wool, ColorRed, color(164, 45, 41, 255));
 
     set_color(Step, StepCobblestone, get_color(Cobblestone));
     set_color(Step, StepStone, get_color(Stone));
