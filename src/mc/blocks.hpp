@@ -106,6 +106,7 @@ namespace mc {
     Cake = 0x5C,
     RedstoneRepeaterOn = 0x5D,
     RedstoneRepeaterOff = 0x5E,
+    StainedGlass = 0x5F,
     Trapdoor = 0x60,
     EggBlock = 0x61,
     StoneBrick = 0x62,
@@ -133,29 +134,32 @@ namespace mc {
     EndPortalFrame = 0x78,
     EndStone = 0x79,
     DragonEgg = 0x7A,
+    StainedClay = 0x9F,
+    StainedGlassPane = 0xA0,
+    HardenedClay = 0xAC,
     PineLeaves = 0xEC,
     BirchLeaves = 0xED,
     MaterialCount = 0x1000
   };
 
   enum {
-    WoolWhite = 0x00,
-    WoolOrange,
-    WoolMagenta,
-    WoolLightBlue,
-    WoolYellow,
-    WoolLightGreen,
-    WoolPink,
-    WoolGray,
-    WoolLightGray,
-    WoolCyan,
-    WoolPurple,
-    WoolBlue,
-    WoolBrown,
-    WoolDarkGreen,
-    WoolRed,
-    WoolBlack,
-    WoolColorCount
+    ColorWhite = 0x00,
+    ColorOrange,
+    ColorMagenta,
+    ColorLightBlue,
+    ColorYellow,
+    ColorLightGreen,
+    ColorPink,
+    ColorGray,
+    ColorLightGray,
+    ColorCyan,
+    ColorPurple,
+    ColorBlue,
+    ColorBrown,
+    ColorDarkGreen,
+    ColorRed,
+    ColorBlack,
+    ColorColorCount
   };
 
   enum {
@@ -165,7 +169,12 @@ namespace mc {
     StepCobblestone,
     StepColorCount
   };
-  
+
+  enum {
+    SandNormal = 0x00,
+    SandRed
+  };
+
   void initialize_constants();
   void deinitialize_constants();
 

@@ -142,6 +142,7 @@ namespace mc {
     MaterialName[Jackolantern] = "Jackolantern";
     MaterialName[RedstoneRepeaterOn] = "RedstoneRepeaterOn";
     MaterialName[RedstoneRepeaterOff] = "RedstoneRepeaterOff";
+    MaterialName[StainedGlass] = "StainedGlass";
     MaterialName[Cake] = "Cake";
     MaterialName[EggBlock] = "EggBlock";
     MaterialName[StoneBrick] = "StoneBrick";
@@ -169,6 +170,9 @@ namespace mc {
     MaterialName[FenceGate] = "FenceGate";
     MaterialName[BrickStairs] = "BrickStairs";
     MaterialName[StoneBrickStairs] = "StoneBrickStairs";
+    MaterialName[StainedClay] = "StainedClay";
+    MaterialName[StainedGlassPane] = "StainedGlassPane";
+    MaterialName[HardenedClay] = "HardenedClay";
     MaterialName[PineLeaves] = "PineLeaves";
     MaterialName[BirchLeaves] = "BirchLeaves";
     
@@ -184,7 +188,6 @@ namespace mc {
     set_color(StationaryWater, 0, color(56,68,127,64), SharedInvisColor, false);
     set_color(Lava, 0, color(255,90,0,255));
     set_color(StationaryLava, 0, color(255,90,0,255));
-    set_color(Sand, 0, color(218,210,158,255));
     set_color(Gravel, 0, color(136,126,126,255));
     set_color(GoldOre, 0, color(143,140,125,255));
     set_color(IronOre, 0, color(136,130,127,255));
@@ -292,6 +295,7 @@ namespace mc {
     set_color(FenceGate, 0, get_color(Fence));
     set_color(BrickStairs, 0, get_color(Brick));
     set_color(StoneBrickStairs, 0, get_color(Stone));
+    set_color(HardenedClay, 0, color(138,83,60,255));
     set_color(PineLeaves, 0, color(50,89,45,128));
     set_color(BirchLeaves, 0, color(94,167,84,128));
 
@@ -389,6 +393,7 @@ namespace mc {
     MaterialModes[Cake] = HalfBlock;
     MaterialModes[RedstoneRepeaterOn] = Block;
     MaterialModes[RedstoneRepeaterOff] = Block;
+    MaterialModes[StainedGlass] = Block;
     MaterialModes[EggBlock] = Block;
     MaterialModes[StoneBrick] = Block;
     MaterialModes[HugeRedMushroom] = Block;
@@ -415,6 +420,9 @@ namespace mc {
     MaterialModes[FenceGate] = Block;
     MaterialModes[BrickStairs] = Block;
     MaterialModes[StoneBrickStairs] = Block;
+    MaterialModes[StainedClay] = Block;
+    MaterialModes[StainedGlassPane] = Block;
+    MaterialModes[HardenedClay] = Block;
     MaterialModes[PineLeaves] = Block;
     MaterialModes[BirchLeaves] = Block;
 
@@ -423,22 +431,73 @@ namespace mc {
      * Start with the highest index to reduce allocation time complexity 
      * The order of the following entries does not matter.
      */
-    set_color(Wool, WoolBlack, color(27, 23, 23, 255));
-    set_color(Wool, WoolWhite, color(223, 223, 223, 255));
-    set_color(Wool, WoolOrange, color(234, 128, 55, 255));
-    set_color(Wool, WoolMagenta, color(191, 76, 201, 255));
-    set_color(Wool, WoolLightBlue, color(105, 139, 212, 255));
-    set_color(Wool, WoolYellow, color(195, 181, 28, 255));
-    set_color(Wool, WoolLightGreen, color(59, 189, 48, 255));
-    set_color(Wool, WoolPink, color(218, 132, 155, 255));
-    set_color(Wool, WoolGray, color(67, 67, 67, 255));
-    set_color(Wool, WoolLightGray, color(159, 166, 166, 255));
-    set_color(Wool, WoolCyan, color(39, 117, 150, 255));
-    set_color(Wool, WoolPurple, color(130, 54, 196, 255));
-    set_color(Wool, WoolBlue, color(39, 51, 154, 255));
-    set_color(Wool, WoolBrown, color(86, 51, 28, 255));
-    set_color(Wool, WoolDarkGreen, color(56, 77, 24, 255));
-    set_color(Wool, WoolRed, color(164, 45, 41, 255));
+    set_color(StainedGlass, ColorBlack, color(27, 23, 23, 48));
+    set_color(StainedGlass, ColorWhite, color(223, 223, 223, 48));
+    set_color(StainedGlass, ColorOrange, color(234, 128, 55, 48));
+    set_color(StainedGlass, ColorMagenta, color(191, 76, 201, 48));
+    set_color(StainedGlass, ColorLightBlue, color(105, 139, 212, 48));
+    set_color(StainedGlass, ColorYellow, color(195, 181, 28, 48));
+    set_color(StainedGlass, ColorLightGreen, color(59, 189, 48, 48));
+    set_color(StainedGlass, ColorPink, color(218, 132, 155, 48));
+    set_color(StainedGlass, ColorGray, color(67, 67, 67, 48));
+    set_color(StainedGlass, ColorLightGray, color(159, 166, 166, 48));
+    set_color(StainedGlass, ColorCyan, color(39, 117, 150, 48));
+    set_color(StainedGlass, ColorPurple, color(130, 54, 196, 48));
+    set_color(StainedGlass, ColorBlue, color(39, 51, 154, 48));
+    set_color(StainedGlass, ColorBrown, color(86, 51, 28, 48));
+    set_color(StainedGlass, ColorDarkGreen, color(56, 77, 24, 48));
+    set_color(StainedGlass, ColorRed, color(164, 45, 41, 48));
+
+    set_color(StainedGlassPane, ColorBlack, get_color(StainedGlassPane, ColorBlack));
+    set_color(StainedGlassPane, ColorWhite, get_color(StainedGlassPane, ColorWhite));
+    set_color(StainedGlassPane, ColorOrange, get_color(StainedGlassPane, ColorOrange));
+    set_color(StainedGlassPane, ColorMagenta, get_color(StainedGlassPane, ColorMagenta));
+    set_color(StainedGlassPane, ColorLightBlue, get_color(StainedGlassPane, ColorLightBlue));
+    set_color(StainedGlassPane, ColorYellow, get_color(StainedGlassPane, ColorYellow));
+    set_color(StainedGlassPane, ColorLightGreen, get_color(StainedGlassPane, ColorLightGreen));
+    set_color(StainedGlassPane, ColorPink, get_color(StainedGlassPane, ColorPink));
+    set_color(StainedGlassPane, ColorGray, get_color(StainedGlassPane, ColorGray));
+    set_color(StainedGlassPane, ColorLightGray, get_color(StainedGlassPane, ColorLightGray));
+    set_color(StainedGlassPane, ColorCyan, get_color(StainedGlassPane, ColorCyan));
+    set_color(StainedGlassPane, ColorPurple, get_color(StainedGlassPane, ColorPurple));
+    set_color(StainedGlassPane, ColorBlue, get_color(StainedGlassPane, ColorBlue));
+    set_color(StainedGlassPane, ColorBrown, get_color(StainedGlassPane, ColorBrown));
+    set_color(StainedGlassPane, ColorDarkGreen, get_color(StainedGlassPane, ColorDarkGreen));
+    set_color(StainedGlassPane, ColorRed, get_color(StainedGlassPane, ColorRed));
+
+    set_color(StainedClay, ColorBlack, color(39, 24, 17, 255));
+    set_color(StainedClay, ColorWhite, color(210, 177, 161, 255));
+    set_color(StainedClay, ColorOrange, color(162, 82, 36, 255));
+    set_color(StainedClay, ColorMagenta, color(149, 89, 110, 255));
+    set_color(StainedClay, ColorLightBlue, color(117, 111, 140, 255));
+    set_color(StainedClay, ColorYellow, color(186, 134, 36, 255));
+    set_color(StainedClay, ColorLightGreen, color(102, 115, 48, 255));
+    set_color(StainedClay, ColorPink, color(163, 80, 80, 255));
+    set_color(StainedClay, ColorGray, color(57, 42, 35, 255));
+    set_color(StainedClay, ColorLightGray, color(135, 107, 98, 255));
+    set_color(StainedClay, ColorCyan, color(91, 95, 94, 255));
+    set_color(StainedClay, ColorPurple, color(119, 72, 87, 255));
+    set_color(StainedClay, ColorBlue, color(76, 62, 92, 255));
+    set_color(StainedClay, ColorBrown, color(77, 51, 36, 255));
+    set_color(StainedClay, ColorDarkGreen, color(76, 84, 43, 255));
+    set_color(StainedClay, ColorRed, color(142, 61, 47, 255));
+
+    set_color(Wool, ColorBlack, color(27, 23, 23, 255));
+    set_color(Wool, ColorWhite, color(223, 223, 223, 255));
+    set_color(Wool, ColorOrange, color(234, 128, 55, 255));
+    set_color(Wool, ColorMagenta, color(191, 76, 201, 255));
+    set_color(Wool, ColorLightBlue, color(105, 139, 212, 255));
+    set_color(Wool, ColorYellow, color(195, 181, 28, 255));
+    set_color(Wool, ColorLightGreen, color(59, 189, 48, 255));
+    set_color(Wool, ColorPink, color(218, 132, 155, 255));
+    set_color(Wool, ColorGray, color(67, 67, 67, 255));
+    set_color(Wool, ColorLightGray, color(159, 166, 166, 255));
+    set_color(Wool, ColorCyan, color(39, 117, 150, 255));
+    set_color(Wool, ColorPurple, color(130, 54, 196, 255));
+    set_color(Wool, ColorBlue, color(39, 51, 154, 255));
+    set_color(Wool, ColorBrown, color(86, 51, 28, 255));
+    set_color(Wool, ColorDarkGreen, color(56, 77, 24, 255));
+    set_color(Wool, ColorRed, color(164, 45, 41, 255));
 
     set_color(Step, StepCobblestone, get_color(Cobblestone));
     set_color(Step, StepStone, get_color(Stone));
@@ -449,6 +508,9 @@ namespace mc {
     set_color(DoubleStep, StepStone, get_color(Stone));
     set_color(DoubleStep, StepSandstone, get_color(Sandstone));
     set_color(DoubleStep, StepWood, get_color(Wood));
+
+    set_color(Sand, SandNormal, color(218, 210, 158, 255));
+    set_color(Sand, SandRed, color(186, 102, 44, 255));
   }
   
   void deinitialize_constants() {
