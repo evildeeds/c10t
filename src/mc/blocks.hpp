@@ -31,7 +31,7 @@ namespace mc {
     IronOre = 0x0F,
     CoalOre = 0x10,
     Log = 0x11,
-    Leaves = 0x12,
+    Leaves1 = 0x12,
     Sponge = 0x13,
     Glass = 0x14,
     LapisLazuliOre = 0x15,
@@ -134,11 +134,24 @@ namespace mc {
     EndPortalFrame = 0x78,
     EndStone = 0x79,
     DragonEgg = 0x7A,
+<<<<<<< HEAD
+    EmeraldOre = 0x81,
+    EmeraldBlock = 0x85,
+    NetherQuartzOre = 0x99,
+    StainedClay = 0x9F,
+    StainedGlassPane = 0xA0,
+    Leaves2 = 0xA1,
+    Carpet = 0xAB,
+    HardenedClay = 0xAC,
+    OldPineLeaves = 0xEC,   // Old, Minecraft 1.0-1.2(?)
+    OldBirchLeaves = 0xED,  // Old, Minecraft 1.0-1.2(?)
+=======
     StainedClay = 0x9F,
     StainedGlassPane = 0xA0,
     HardenedClay = 0xAC,
     PineLeaves = 0xEC,
     BirchLeaves = 0xED,
+>>>>>>> 2f630a1bde8ec80feae1093c850c046bd007f592
     MaterialCount = 0x1000
   };
 
@@ -167,12 +180,20 @@ namespace mc {
     StepSandstone,
     StepWood,
     StepCobblestone,
+    StepBrick,
+    StepStoneBrick,
+    StepNetherBrick,
     StepColorCount
   };
 
   enum {
     SandNormal = 0x00,
+<<<<<<< HEAD
+    SandRed,
+    SandColorCount
+=======
     SandRed
+>>>>>>> 2f630a1bde8ec80feae1093c850c046bd007f592
   };
 
   void initialize_constants();

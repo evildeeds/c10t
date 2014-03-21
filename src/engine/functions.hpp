@@ -24,7 +24,8 @@ inline bool is_open(int bt) {
   
   switch(bt) {
     case mc::Air: return true;
-    case mc::Leaves: return true;
+    case mc::Leaves1: return true;
+    case mc::Leaves2: return true;
     default: return false;
   }
 }
