@@ -66,7 +66,7 @@ namespace mc {
     MaterialName[GoldOre] = "GoldOre";
     MaterialName[IronOre] = "IronOre";
     MaterialName[CoalOre] = "CoalOre";
-    MaterialName[Log] = "Log";
+    MaterialName[Log1] = "Log";
     MaterialName[Leaves1] = "Leaves";
     MaterialName[Sponge] = "Sponge";
     MaterialName[Glass] = "Glass";
@@ -85,7 +85,7 @@ namespace mc {
     MaterialName[PistonPlatform] = "PistonPlatform";
     MaterialName[Wool] = "Wool";
     MaterialName[YellowFlower] = "YellowFlower";
-    MaterialName[RedRose] = "RedRose";
+    MaterialName[RedFlower] = "RedFlower";
     MaterialName[BrownMushroom] = "BrownMushroom";
     MaterialName[RedMushroom] = "RedMushroom";
     MaterialName[GoldBlock] = "GoldBlock";
@@ -167,7 +167,9 @@ namespace mc {
     MaterialName[DragonEgg] = "DragonEgg";
     MaterialName[EmeraldOre] = "EmeraldOre";
     MaterialName[EmeraldBlock] = "EmeraldBlock";
+    MaterialName[RedStoneBlock] = "RedStoneBlock";
     MaterialName[NetherQuartzOre] = "NetherQuartzOre";
+    MaterialName[NetherQuartzBlock] = "NetherQuartzBlock";
     MaterialName[Mycelium] = "Mycelium";
     MaterialName[Vines] = "Vines";
     MaterialName[FenceGate] = "FenceGate";
@@ -176,8 +178,10 @@ namespace mc {
     MaterialName[StainedClay] = "StainedClay";
     MaterialName[StainedGlassPane] = "StainedGlassPane";
     MaterialName[Leaves2] = "Leaves2";
+    MaterialName[Log2] = "Log2";
     MaterialName[Carpet] = "Carpet";
     MaterialName[HardenedClay] = "HardenedClay";
+    MaterialName[CoalBlock] = "CoalBlock";
 
     // Old, Minecraft 1.0-1.2(?)
     MaterialName[OldPineLeaves] = "_PineLeaves";
@@ -199,7 +203,7 @@ namespace mc {
     set_color(GoldOre, 0, color(143,140,125,255));
     set_color(IronOre, 0, color(136,130,127,255));
     set_color(CoalOre, 0, color(115,115,115,255));
-    set_color(Log, 0, color(102,81,51,255));
+    set_color(Log1, 0, color(102,81,51,255));
     set_color(Leaves1, 0, color(74, 131, 66, 128));
     set_color(Sponge, 0, color(0xc3,0xc3,0x32,0xff));
     set_color(Glass, 0, color(255,255,255,48));
@@ -218,7 +222,6 @@ namespace mc {
     set_color(PistonBase, 0, get_color(Wood));
     set_color(PistonPlatform, 0, get_color(Air));
     set_color(YellowFlower, 0, color(255,255,0,255));
-    set_color(RedRose, 0, color(255,0,0,255));
     set_color(BrownMushroom, 0, color(200, 200, 0, 255));
     set_color(RedMushroom, 0, color(255, 0, 0, 255));
     set_color(GoldBlock, 0, color(0xff, 0xed, 0x8c, 0xff));
@@ -299,14 +302,18 @@ namespace mc {
     set_color(DragonEgg, 0, color(72,4,82,255));
     set_color(EmeraldOre, 0, color(128,134,128,255));
     set_color(EmeraldBlock, 0, color(15,210,15,255));
+    set_color(RedStoneBlock, 0, color(240,30,30,255));
     set_color(NetherQuartzOre, 0, color(199, 120, 120, 255));
+    set_color(NetherQuartzBlock, 0, color(215, 215, 215, 255));
     set_color(Mycelium, 0, color(110,93,133,255));
     set_color(Vines, 0, color(50,89,45,128), color(50,89,45,128));
     set_color(FenceGate, 0, get_color(Fence));
     set_color(BrickStairs, 0, get_color(Brick));
     set_color(StoneBrickStairs, 0, get_color(Stone));
     set_color(Leaves2, 0, get_color(Leaves1));
+    set_color(Log2, 0, get_color(Log1));
     set_color(HardenedClay, 0, color(138,83,60,255));
+    set_color(CoalBlock, 0, color(16,16,16,255));
 
     // Old, Minecraft 1.0-1.2(?)
     set_color(OldPineLeaves, 0, color(50,89,45,128));
@@ -329,7 +336,7 @@ namespace mc {
     MaterialModes[GoldOre] = Block;
     MaterialModes[IronOre] = Block;
     MaterialModes[CoalOre] = Block;
-    MaterialModes[Log] = Block;
+    MaterialModes[Log1] = Block;
     MaterialModes[Leaves1] = Block;
     MaterialModes[Sponge] = Block;
     MaterialModes[Glass] = Block;
@@ -348,7 +355,7 @@ namespace mc {
     MaterialModes[PistonPlatform] = Block;
     MaterialModes[Wool] = Block;
     MaterialModes[YellowFlower] = Block;
-    MaterialModes[RedRose] = Block;
+    MaterialModes[RedFlower] = Block;
     MaterialModes[BrownMushroom] = Block;
     MaterialModes[RedMushroom] = Block;
     MaterialModes[GoldBlock] = Block;
@@ -432,13 +439,16 @@ namespace mc {
     MaterialModes[DragonEgg] = Block;
     MaterialModes[EmeraldOre] = Block;
     MaterialModes[EmeraldBlock] = Block;
+    MaterialModes[RedStoneBlock] = Block;
     MaterialModes[NetherQuartzOre] = Block;
+    MaterialModes[NetherQuartzBlock] = Block;
     MaterialModes[FenceGate] = Block;
     MaterialModes[BrickStairs] = Block;
     MaterialModes[StoneBrickStairs] = Block;
     MaterialModes[StainedClay] = Block;
     MaterialModes[StainedGlassPane] = Block;
     MaterialModes[Leaves2] = Block;
+    MaterialModes[Log2] = Block;
     MaterialModes[Carpet] = HalfBlock;
     MaterialModes[HardenedClay] = Block;
 
@@ -536,6 +546,16 @@ namespace mc {
     set_color(Carpet, ColorDarkGreen, get_color(Wool, ColorDarkGreen));
     set_color(Carpet, ColorRed, get_color(Wool, ColorRed));
 
+    set_color(RedFlower, OxeyeDaisy, color(255,255,255,255));
+    set_color(RedFlower, Poppy, color(255,0,0,255));
+    set_color(RedFlower, BlueOrchid, color(180,180,255,255));
+    set_color(RedFlower, Allium, color(255,0,255,255));
+    set_color(RedFlower, AzureBluet, color(230,230,255,255));
+    set_color(RedFlower, RedTulip, color(255,0,0,255));
+    set_color(RedFlower, OrangeTulip, color(255,128,55,255));
+    set_color(RedFlower, WhiteTulip, color(255,255,255,255));
+    set_color(RedFlower, PinkTulip, color(255,200,200,255));
+
     set_color(Step, StepNetherBrick, get_color(NetherBrick));
     set_color(Step, StepStone, get_color(Stone));
     set_color(Step, StepCobblestone, get_color(Cobblestone));
@@ -549,7 +569,6 @@ namespace mc {
     set_color(DoubleStep, StepCobblestone, get_color(Cobblestone));
     set_color(DoubleStep, StepSandstone, get_color(Sandstone));
     set_color(DoubleStep, StepWood, get_color(Wood));
-
     set_color(DoubleStep, StepBrick, get_color(Brick));
     set_color(DoubleStep, StepStoneBrick, get_color(StoneBrick));
 

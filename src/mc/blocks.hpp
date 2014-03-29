@@ -30,7 +30,7 @@ namespace mc {
     GoldOre = 0x0E,
     IronOre = 0x0F,
     CoalOre = 0x10,
-    Log = 0x11,
+    Log1 = 0x11,
     Leaves1 = 0x12,
     Sponge = 0x13,
     Glass = 0x14,
@@ -49,7 +49,7 @@ namespace mc {
     PistonPlatform = 0x22,
     Wool = 0x23,
     YellowFlower = 0x25,
-    RedRose = 0x26,
+    RedFlower = 0x26,
     BrownMushroom = 0x27,
     RedMushroom = 0x28,
     GoldBlock = 0x29,
@@ -136,12 +136,16 @@ namespace mc {
     DragonEgg = 0x7A,
     EmeraldOre = 0x81,
     EmeraldBlock = 0x85,
+    RedStoneBlock = 0x98,
     NetherQuartzOre = 0x99,
+    NetherQuartzBlock = 0x9B,
     StainedClay = 0x9F,
     StainedGlassPane = 0xA0,
     Leaves2 = 0xA1,
+    Log2 = 0xA2,
     Carpet = 0xAB,
     HardenedClay = 0xAC,
+    CoalBlock = 0xAD,
     OldPineLeaves = 0xEC,   // Old, Minecraft 1.0-1.2(?)
     OldBirchLeaves = 0xED,  // Old, Minecraft 1.0-1.2(?)
     MaterialCount = 0x1000
@@ -182,6 +186,19 @@ namespace mc {
     SandNormal = 0x00,
     SandRed,
     SandColorCount
+  };
+
+  enum {
+    Poppy = 0x00, // Also RoseRed
+    BlueOrchid,
+    Allium,
+    AzureBluet,
+    RedTulip,
+    OrangeTulip,
+    WhiteTulip,
+    PinkTulip,
+    OxeyeDaisy,
+    RedFlowerCount
   };
 
   void initialize_constants();
